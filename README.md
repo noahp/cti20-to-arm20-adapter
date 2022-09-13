@@ -18,3 +18,11 @@ https://software-dl.ti.com/ccs/esd/documents/xdsdebugprobes/emu_jtag_connectors.
     3020-20-0300-00](https://www.digikey.com/en/products/detail/cnc-tech/3020-20-0300-00/3441742)
   - unshrouded: [Amphenol
     54202-G0810LF](https://www.digikey.com/en/products/detail/amphenol-cs-fci/54202-G0810LF/1490928)
+
+## KiBot
+
+You can run it locally with this:
+
+```bash
+docker run --rm -i -t --volume $PWD:/workspace --workdir /workspace setsoft/kicad_auto_test:ki6.0.7_Debian kibot -c .kibot.yaml
+```

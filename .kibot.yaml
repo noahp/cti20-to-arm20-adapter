@@ -1,0 +1,21 @@
+
+kibot:
+  version: 1
+
+preflight:
+
+outputs:
+
+  # IBoM (Interactive HTML BoM):
+  # For more information: https://github.com/INTI-CMNB/InteractiveHtmlBom
+  # This output is what you get from the InteractiveHtmlBom plug-in (pcbnew).
+  - name: 'ibom_example'
+    comment: 'Generates an interactive web page useful to identify the position of the components in the PCB.'
+    type: 'ibom'
+
+  # PDF Schematic Print (Portable Document Format):
+  # This is the main format to document your schematic.
+  # This output is what you get from the 'File/Print' menu in eeschema.
+  - name: 'pdf_sch_print_example'
+    comment: 'Exports the PCB to the most common exchange format. Suitable for printing.'
+    type: 'pdf_sch_print'

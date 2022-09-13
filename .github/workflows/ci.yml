@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches:
+    - 'master'
+  pull_request:
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: INTI-CMNB/KiBot@v2_k6
+      with:
+        config: .kibot.yaml
+    - name: upload results
+      uses: actions/upload-artifact@v3
+      with:
+        name: output
+        path: |
+          cti20-to-arm20-adapter-ibom.html
+          cti20-to-arm20-adapter-schematic.pdf
